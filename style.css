@@ -1,51 +1,217 @@
+/* GLOBAL */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #1a1a1a;
-    background-color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #1b2635; /* deep slate */
+    background-color: #f5f7fb; /* very light blue-gray */
 }
 
 .container {
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
+    width: 92%;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-h1, h2 {
-    color: #0a3d78; /* Deep professional blue */
+h1, h2, h3 {
+    margin-top: 0;
+    color: #0a3d78; /* brand blue */
+    letter-spacing: 0.02em;
 }
 
-.cta-btn {
-    background-color: #e9c46a; /* Gold */
-    color: #1a1a1a;
-    padding: 14px 26px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 20px 0;
+h1 {
+    font-size: 2.2rem;
+    line-height: 1.25;
 }
 
-.video-placeholder {
-    margin-top: 30px;
-    padding: 40px;
-    background: #f3f3f3;
-    border-radius: 8px;
-    text-align: center;
-    color: #666;
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
 }
 
-section {
-    padding: 60px 0;
+p {
+    line-height: 1.6;
+    margin: 0.5rem 0 0.75rem;
+    color: #344156;
 }
 
-.screenshot-img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
+ul {
+    padding-left: 1.2rem;
+    margin: 0.5rem 0 0.75rem;
 }
 
 ul li {
-    margin: 12px 0;
-    line-height: 1.5;
+    margin: 0.35rem 0;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 64px 0;
+}
+
+/* HERO */
+
+.hero {
+    background: radial-gradient(circle at top left, #e9f2ff, #f5f7fb 55%);
+    border-bottom: 1px solid #dde4f0;
+}
+
+.hero .container {
+    text-align: center;
+}
+
+.hero h1 {
+    margin-bottom: 1rem;
+}
+
+.hero .subtext {
+    max-width: 650px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.02rem;
+    color: #3d4b63;
+}
+
+/* CTA BUTTON */
+
+.cta-btn {
+    background-color: #e9c46a; /* gold */
+    color: #1b2635;
+    padding: 12px 26px;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0.5rem 0 1.75rem;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+    background-color: #f0cf7f;
+}
+
+/* VIDEO PLACEHOLDER / TESTIMONIAL BLOCKS */
+
+.video-placeholder {
+    margin-top: 1.5rem;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 14px;
+    text-align: center;
+    color: #6b7280;
+    border: 1px solid #dde4f0;
+}
+
+/* BAND STYLES FOR SECTIONS */
+
+.shift,
+.what-it-does,
+.benefits,
+.faq {
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f5;
+    border-bottom: 1px solid #e2e8f5;
+}
+
+.why-matters-expanded,
+.how-it-works,
+.social-proof,
+.screenshot,
+.included,
+.cta-bottom,
+.next-step {
+    background-color: #f5f7fb;
+}
+
+/* SECTION-SPECIFIC TWEAKS */
+
+.shift .container,
+.why-matters-expanded .container,
+.how-it-works .container,
+.benefits .container,
+.social-proof .container,
+.faq .container,
+.screenshot .container,
+.included .container,
+.cta-bottom .container,
+.next-step .container {
+    max-width: 880px;
+}
+
+/* “HOW IT WORKS” LIST */
+
+.how-it-works ul li {
+    margin-bottom: 0.9rem;
+}
+
+/* BENEFITS LIST */
+
+.benefits ul li::marker,
+.included ul li::marker,
+.faq ul li::marker {
+    color: #e9c46a; /* gold bullets */
+}
+
+/* SCREENSHOT IMAGE */
+
+.screenshot-img {
+    width: 100%;
+    border-radius: 16px;
+    margin-top: 1.25rem;
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.16);
+}
+
+/* CTA BOTTOM */
+
+.cta-bottom {
+    text-align: center;
+}
+
+.cta-bottom p {
+    font-weight: 500;
+}
+
+/* NEXT STEP / TRANSITION */
+
+.next-step p {
+    text-align: center;
+    font-size: 0.98rem;
+    color: #4b5565;
+}
+
+.next-step strong {
+    color: #0a3d78;
+}
+
+/* SOCIAL PROOF */
+
+.social-proof h2 {
+    text-align: left;
+}
+
+.social-proof .video-placeholder {
+    margin-top: 1.25rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 48px 0;
+    }
+
+    .video-placeholder {
+        padding: 24px;
+    }
 }
