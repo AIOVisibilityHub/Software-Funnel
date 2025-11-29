@@ -17,10 +17,8 @@ body {
     margin: 0 auto;
 }
 
-  .gold-gradient {
-    background: linear-gradient(#FFF8B0, #D4AF37, #8B7500);
-    -webkit-background-clip: text;
-    color: transparent;
+  .gold-headline {
+    color: #FFD700; /* gold */
   }
 
 h1, h2, h3 {
