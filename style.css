@@ -17,6 +17,12 @@ body {
     margin: 0 auto;
 }
 
+  .gold-gradient {
+    background: linear-gradient(#FFF8B0, #D4AF37, #8B7500);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
 h1, h2, h3 {
     margin-top: 0;
     color: #0a3d78; /* brand blue */
